@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Digital7-rg1mL.ttf</string>
+		<string>Digital7Italic-BW658.ttf</string>
+		<string>Digital7Mono-Yz9J4.ttf</string>
+		<string>Digital7Monoitalic-8MDLJ.ttf</string>
+	</array>
+</dict>
+</plist>

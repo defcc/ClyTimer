@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="hgD-D1-2kK">
+            <objects>
+                <windowController storyboardIdentifier="PaywallWindowController" id="nNe-cA-EhP" customClass="PaywallWindowController" customModule="ClyTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="dcd-uj-Wuk">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="211" y="267" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+                        <view key="contentView" id="ld7-u5-CaU">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="nNe-cA-EhP" id="iCe-gx-SZY"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="7G5-CJ-x9Q" kind="relationship" relationship="window.shadowedContentViewController" id="Fog-Nj-Ghe"/>
+                    </connections>
+                </windowController>
+                <customObject id="MZ4-jf-k1N" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136" y="-323"/>
+        </scene>
+        <!--Paywall View Controller-->
+        <scene sceneID="2ro-KH-LaV">
+            <objects>
+                <viewController storyboardIdentifier="PaywallViewController" id="7G5-CJ-x9Q" customClass="PaywallViewController" customModule="ClyTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="mdt-kq-4uN">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="600"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-QV-cOg">
+                                <rect key="frame" x="199" y="484" width="82" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="ClyTimer Pro" id="9Cl-MR-Ilv">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbD-Vc-q3m">
+                                <rect key="frame" x="209" y="518" width="62" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon" id="9cF-fm-DGB"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X78-jn-nBk">
+                                <rect key="frame" x="40" y="428" width="127" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Unlimited usage" id="lbH-U5-LnF">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRF-p6-Rrr">
+                                <rect key="frame" x="41" y="404" width="408" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" title="The window will not be interactive for the first 5s for non-pro user" id="byy-f8-wdb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYN-0b-4mV">
+                                <rect key="frame" x="41" y="361" width="198" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Unlimited Timer Windows" id="gJy-Pd-NIp">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyc-2M-FXW">
+                                <rect key="frame" x="41" y="337" width="373" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Only one timer window at the same time for the non-pro user" id="yFb-vA-efE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-sF-trq">
+                                <rect key="frame" x="41" y="297" width="181" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Customization of Timer" id="Wan-jI-z4V">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryM-0P-rfb">
+                                <rect key="frame" x="41" y="273" width="401" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Customization of the timer configuration is restricted to pro users" id="h6H-2Q-Mx2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-cT-urT">
+                                <rect key="frame" x="41" y="233" width="170" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Support ClyTimer Dev" id="7UK-Kx-La0">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-ZF-kme">
+                                <rect key="frame" x="41" y="209" width="367" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Every purchase you make helps me improve this app for you" id="ru3-7a-zPi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YK-Xs-HIF">
+                                <rect key="frame" x="126" y="55" width="265" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="Unlock Premium" bezelStyle="regularSquare" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="08L-Zb-YvB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="purchaseButtonTapped:" target="7G5-CJ-x9Q" id="gKN-B5-uIc"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYn-ax-seg">
+                                <rect key="frame" x="191" y="20" width="134" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="squareTextured" title="Restore Purchases" bezelStyle="texturedSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="U9A-nl-d28">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="restoreButtonTapped:" target="7G5-CJ-x9Q" id="LLD-Dv-8P8"/>
+                                </connections>
+                            </button>
+                            <box fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-tN-gRO">
+                                <rect key="frame" x="30" y="112" width="420" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="3SC-Zj-4ZK">
+                                    <rect key="frame" x="4" y="5" width="412" height="62"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxh-jK-6Za">
+                                            <rect key="frame" x="303" y="23" width="99" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Lifetime access" id="5QK-2d-y30">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-X2-UPa">
+                                            <rect key="frame" x="10" y="31" width="100" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" id="Vrs-ee-tdo">
+                                                <font key="font" metaFont="systemSemibold" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7R-T1-ZtC">
+                                            <rect key="frame" x="10" y="11" width="139" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Buy once, use forever." id="O5x-rM-Ddt">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBA-px-SRv">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <progressIndicator fixedFrame="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="f6h-zF-Vnj">
+                                <rect key="frame" x="232" y="361" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1a5-QV-cOg" firstAttribute="top" secondItem="mdt-kq-4uN" secondAttribute="top" constant="100" id="O9j-aI-eUr"/>
+                            <constraint firstItem="1a5-QV-cOg" firstAttribute="centerX" secondItem="mdt-kq-4uN" secondAttribute="centerX" id="fxw-yn-KEr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loading" destination="f6h-zF-Vnj" id="0nS-iD-oRp"/>
+                        <outlet property="overlay" destination="JBA-px-SRv" id="MOy-5v-dhV"/>
+                        <outlet property="priceLabel" destination="ueo-X2-UPa" id="NzM-dz-xrc"/>
+                    </connections>
+                </viewController>
+                <customObject id="6rX-u8-mRf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136" y="330"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="128" height="128"/>
+    </resources>
+</document>

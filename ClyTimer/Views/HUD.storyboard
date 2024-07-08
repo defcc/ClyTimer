@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Am9-7j-ahS">
+            <objects>
+                <windowController storyboardIdentifier="HudWindowController" id="6V2-H0-Iel" customClass="HudWindowController" customModule="FloatWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="8oy-uh-u4B">
+                        <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="211" y="267" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+                        <view key="contentView" id="QxB-Cl-Ypy">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="6V2-H0-Iel" id="PZa-vs-xOu"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="zzE-yo-WBy" kind="relationship" relationship="window.shadowedContentViewController" id="eKe-NY-zf2"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oac-HJ-dVt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="3"/>
+        </scene>
+        <!--Shelf View Controller-->
+        <scene sceneID="KNc-xk-PEs">
+            <objects>
+                <viewController storyboardIdentifier="HudViewController" id="zzE-yo-WBy" customClass="ShelfViewController" customModule="FloatWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-XI-zku" customClass="MyDragView" customModule="FloatWidget" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="162" height="100"/>
+                        <subviews>
+                            <visualEffectView blendingMode="behindWindow" material="menu" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-G3-ass">
+                                <rect key="frame" x="0.0" y="0.0" width="162" height="100"/>
+                                <subviews>
+                                    <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-ib-njz">
+                                        <rect key="frame" x="38" y="75" width="106" height="15"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" title="ClyPaste HUD" id="N9p-iq-RSO">
+                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FRb-ib-njz" firstAttribute="leading" secondItem="fhr-G3-ass" secondAttribute="leading" constant="40" id="6Eg-37-oDJ"/>
+                                    <constraint firstItem="FRb-ib-njz" firstAttribute="top" secondItem="fhr-G3-ass" secondAttribute="top" constant="10" id="aIb-hq-o7x"/>
+                                    <constraint firstItem="FRb-ib-njz" firstAttribute="trailing" secondItem="fhr-G3-ass" secondAttribute="trailing" constant="-20" id="pwR-JN-ZTZ"/>
+                                </constraints>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="leading" secondItem="fhF-XI-zku" secondAttribute="leading" id="1P5-Z4-SSN"/>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="trailing" secondItem="fhF-XI-zku" secondAttribute="trailing" id="HIu-05-s5e"/>
+                            <constraint firstAttribute="bottom" secondItem="fhr-G3-ass" secondAttribute="bottom" id="OyR-Gn-Pun"/>
+                            <constraint firstAttribute="trailing" secondItem="fhr-G3-ass" secondAttribute="trailing" id="dgk-gm-Aa9"/>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="top" secondItem="fhF-XI-zku" secondAttribute="top" id="f9C-Ja-1em"/>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="top" secondItem="fhF-XI-zku" secondAttribute="top" id="tZz-gz-i9R"/>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="leading" secondItem="fhF-XI-zku" secondAttribute="leading" id="xQg-bv-dCo"/>
+                            <constraint firstItem="fhr-G3-ass" firstAttribute="bottom" secondItem="fhF-XI-zku" secondAttribute="bottom" id="yAU-rx-sPG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="FRb-ib-njz" id="PVM-Yz-egB"/>
+                    </connections>
+                </viewController>
+                <customObject id="ioj-2d-Sej" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="-8"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,162 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "5QK-2d-y30.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Lifetime access\"; ObjectID = \"5QK-2d-y30\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Lifetime access"
+          }
+        }
+      }
+    },
+    "7UK-Kx-La0.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Support ClyTimer Dev\"; ObjectID = \"7UK-Kx-La0\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Support ClyTimer Dev"
+          }
+        }
+      }
+    },
+    "08L-Zb-YvB.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Unlock Premium\"; ObjectID = \"08L-Zb-YvB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Unlock Premium"
+          }
+        }
+      }
+    },
+    "9Cl-MR-Ilv.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"ClyTimer Pro\"; ObjectID = \"9Cl-MR-Ilv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ClyTimer Pro"
+          }
+        }
+      }
+    },
+    "byy-f8-wdb.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"The window will not be interactive for the first 5s for non-pro user\"; ObjectID = \"byy-f8-wdb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The window will not be interactive for the first 5s for non-pro user"
+          }
+        }
+      }
+    },
+    "gJy-Pd-NIp.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Unlimited Timer Windows\"; ObjectID = \"gJy-Pd-NIp\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Unlimited Timer Windows"
+          }
+        }
+      }
+    },
+    "h6H-2Q-Mx2.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Customization of the timer configuration is restricted to pro users\"; ObjectID = \"h6H-2Q-Mx2\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Customization of the timer configuration is restricted to pro users"
+          }
+        }
+      }
+    },
+    "lbH-U5-LnF.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Unlimited usage\"; ObjectID = \"lbH-U5-LnF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Unlimited usage"
+          }
+        }
+      }
+    },
+    "O5x-rM-Ddt.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Buy once, use forever.\"; ObjectID = \"O5x-rM-Ddt\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Buy once, use forever."
+          }
+        }
+      }
+    },
+    "ru3-7a-zPi.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Every purchase you make helps me improve this app for you\"; ObjectID = \"ru3-7a-zPi\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Every purchase you make helps me improve this app for you"
+          }
+        }
+      }
+    },
+    "U9A-nl-d28.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Restore Purchases\"; ObjectID = \"U9A-nl-d28\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Restore Purchases"
+          }
+        }
+      }
+    },
+    "Wan-jI-z4V.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Customization of Timer\"; ObjectID = \"Wan-jI-z4V\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Customization of Timer"
+          }
+        }
+      }
+    },
+    "yFb-vA-efE.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Only one timer window at the same time for the non-pro user\"; ObjectID = \"yFb-vA-efE\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Only one timer window at the same time for the non-pro user"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

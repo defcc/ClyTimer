@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Setting" representedClassName="Setting" syncable="YES" codeGenerationType="class">
+        <attribute name="initTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isLTD" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isVip" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="launchAtLogin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="notchApp" attributeType="Boolean" defaultValueString="" usesScalarValueType="YES"/>
+        <attribute name="trialEndAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="trialStartAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="vipExpireAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="vipStartAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="TimerTemplate" representedClassName="TimerTemplate" syncable="YES" codeGenerationType="class">
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="runningSoundId" optional="YES" attributeType="String"/>
+        <attribute name="startSoundId" optional="YES" attributeType="String"/>
+        <attribute name="timeUpSoundId" optional="YES" attributeType="String"/>
+    </entity>
+</model>
