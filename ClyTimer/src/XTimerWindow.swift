@@ -89,6 +89,7 @@ struct XTimerConfig {
 class XTimerWindow: NSObject {
     var xTimerConfig: XTimerConfig
     var panel: NSWindow?
+    var lastWindowSize: CGSize?
     
     init(config: XTimerConfig) {
         xTimerConfig = config
@@ -162,20 +163,16 @@ class XTimerWindow: NSObject {
         DispatchQueue.main.async {
             guard let panel = self.panel else { return }
             
-            // Find the screen the panel is currently on
             let windowFrame = panel.frame
             guard let screen = NSScreen.screens.first(where: { $0.frame.intersects(windowFrame) }) else { return }
             
             let frame = screen.frame
-//            let frame = mainScreen.frame
             
             let panelWidth = frame.size.width
-            let panelHeight = frame.size.height + 20 // Adjust this height as needed
+            let panelHeight = frame.size.height + 20
             let panelFrame = NSRect(x: frame.origin.x, y: frame.origin.y, width: panelWidth, height: panelHeight)
             self.panel?.setContentSize(panelFrame.size)
             self.panel?.setFrameOrigin(panelFrame.origin)
-            
-//            self.animatePanelSizeChange(to: NSSize(width: panelWidth, height: panelHeight))
             
             self.panel?.alphaValue = 1
             self.panel?.isMovableByWindowBackground = false
@@ -185,6 +182,8 @@ class XTimerWindow: NSObject {
 
 extension XTimerWindow: XTimerWindowDelegate {
     func onEnterFullscreen() {
+        lastWindowSize = panel?.frame.size
+        
         panel?.styleMask.remove(.titled)
         setToFullscreen()
     }
@@ -199,7 +198,12 @@ extension XTimerWindow: XTimerWindowDelegate {
             self.panel?.standardWindowButton(.miniaturizeButton)?.isHidden = true
             self.panel?.standardWindowButton(.zoomButton)?.isHidden = true
             
-            self.animatePanelSizeChange(to: NSSize(width: 390, height: 280))
+            var targetSize = NSSize(width: 390, height: 280)
+            if let lastSize = self.lastWindowSize {
+                targetSize = lastSize
+            }
+            
+            self.animatePanelSizeChange(to: targetSize)
         }
         panel?.isMovableByWindowBackground = true
     }
@@ -230,7 +234,7 @@ extension XTimerWindow: NSWindowDelegate {
             return
         }
         
-        print("window resize \(panel?.frame.size)")
+        print("window resize changed \(panel?.frame.size)")
         vc.calculateFontSize()
         vc.onResize()
     }
