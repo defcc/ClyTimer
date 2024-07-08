@@ -18,8 +18,7 @@ Download ClyTimer from the [Mac App Store](https://apps.apple.com/us/app/clytime
 
 ## Preview
 
-<iframe width="100%" height="515" src="https://www.youtube.com/embed/2oFi3kkYDj0?si=V8_CiQ-RqsSNx1U7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+[Youtubube Video](https://www.youtube.com/watch?v=2oFi3kkYDj0&ab_channel=EricMing0)
 
 ![ClyTimer Intro](https://beauty-of-pixel.tech/clytimer-fullscreen-countdown/ClyTimer.png)
 
