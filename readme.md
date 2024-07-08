@@ -21,6 +21,10 @@ Download ClyTimer from the [Mac App Store](https://apps.apple.com/us/app/clytime
 <iframe width="100%" height="515" src="https://www.youtube.com/embed/2oFi3kkYDj0?si=V8_CiQ-RqsSNx1U7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+![ClyTimer Intro](https://beauty-of-pixel.tech/clytimer-fullscreen-countdown/ClyTimer.png)
+
+![ClyTimer Colourful](https://beauty-of-pixel.tech/clytimer-fullscreen-countdown/colorfull-countdown.png)
+
 ## Features
 
 - **Fullscreen Timer**: Enjoy a fullscreen timer, or resize it to a normal window size as needed.
