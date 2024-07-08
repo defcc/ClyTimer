@@ -8,9 +8,15 @@
 
 </div>
 
-<hr style="margin: 40px 0"/>
+
 
 ClyTimer is the ultimate countdown timer for Mac users. With features like fullscreen support, multiple timers, custom text, theme customization, and more, ClyTimer is designed to help you manage your time efficiently and effectively.
+
+Visit our homepage for more details: [ClyTimer Homepage](https://beauty-of-pixel.tech/clytimer-fullscreen-countdown/)
+
+Download ClyTimer from the [Mac App Store](https://apps.apple.com/us/app/clytimer/id6504454659?mt=12) today and transform your MacBook into a powerful alarm clock with just a few clicks!
+
+<hr style="margin: 40px 0"/>
 
 ## Features
 
@@ -83,9 +89,3 @@ ClyTimer is open source software licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions or feedback, feel free to reach out to us at [defcc@icloud.com](mailto:defcc@icloud.com).
-
----
-
-Visit our homepage for more details: [ClyTimer Homepage](https://beauty-of-pixel.tech/clytimer-fullscreen-countdown/)
-
-Download ClyTimer from the [Mac App Store](https://apps.apple.com/us/app/clytimer/id6504454659?mt=12) today and transform your MacBook into a powerful alarm clock with just a few clicks!
