@@ -16,7 +16,10 @@ Visit our homepage for more details: [ClyTimer Homepage](https://beauty-of-pixel
 
 Download ClyTimer from the [Mac App Store](https://apps.apple.com/us/app/clytimer/id6504454659?mt=12) today and transform your MacBook into a powerful alarm clock with just a few clicks!
 
-<hr style="margin: 40px 0"/>
+## Preview
+
+<iframe width="100%" height="515" src="https://www.youtube.com/embed/2oFi3kkYDj0?si=V8_CiQ-RqsSNx1U7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## Features
 
