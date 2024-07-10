@@ -174,7 +174,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func createTimer() {
         _ = ProLoadingWindow(config: XTimerConfig(
-            isFullscreen: true,
+            isFullscreen: DataModel.shared.defaultTimerConfig!.isFullscreen,
             subject: "Break Time",
             selectedTheme: NSColor(hex: "#d9f5d6")!,
             duration: DataModel.shared.defaultTimerConfig!.duration,
@@ -190,7 +190,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func createCountupTimer() {
         _ = ProLoadingWindow(config: XTimerConfig(
-            isFullscreen: true,
+            isFullscreen: DataModel.shared.defaultTimerConfig!.isFullscreen,
             subject: "Break Time",
             selectedTheme: NSColor(hex: "#d9f5d6")!,
             duration: DataModel.shared.defaultTimerConfig!.duration,

@@ -14,6 +14,7 @@
     <entity name="TimerTemplate" representedClassName="TimerTemplate" syncable="YES" codeGenerationType="class">
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isFullscreen" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="runningSoundId" optional="YES" attributeType="String"/>
         <attribute name="startSoundId" optional="YES" attributeType="String"/>

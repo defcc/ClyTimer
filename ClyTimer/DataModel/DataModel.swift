@@ -23,6 +23,7 @@ struct TimerConfigItem {
     var startSoundId: String
     var runningSoundId: String
     var timeUpSoundId: String
+    var isFullscreen: Bool
 }
 
 class DataModel {
@@ -133,6 +134,7 @@ class DataModel {
             templateData.startSoundId = "Bell"
             templateData.runningSoundId = "Clock Tick"
             templateData.timeUpSoundId = "Digital"
+            templateData.isFullscreen = false
             save()
         }catch {
             print(error)
@@ -219,7 +221,8 @@ class DataModel {
                     duration: Int($0.duration),
                     startSoundId: $0.startSoundId!,
                     runningSoundId: $0.runningSoundId!,
-                    timeUpSoundId: $0.timeUpSoundId!
+                    timeUpSoundId: $0.timeUpSoundId!,
+                    isFullscreen: $0.isFullscreen
                 )
                 
                 defaultTimerConfig = timerConfigItem

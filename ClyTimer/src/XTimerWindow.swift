@@ -95,24 +95,33 @@ class XTimerWindow: NSObject {
         xTimerConfig = config
         super.init()
         createTimerPanel()
+        panel?.center()
         panel?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
+        NSApp.activate(ignoringOtherApps: true)        
     }
     
     func createTimerPanel() {
-        guard let mainScreen = NSScreen.main else { return }
-        let mainScreenFrame = mainScreen.frame
+        var targetFrame = NSRect(x: 0, y: 0, width: 390, height: 280)
         
-        let panelWidth = mainScreenFrame.size.width
-        let panelHeight = mainScreenFrame.size.height + 20 // Adjust this height as needed
-        let panelFrame = NSRect(x: mainScreenFrame.origin.x, y: mainScreenFrame.origin.y, width: panelWidth, height: panelHeight)
+        if xTimerConfig.isFullscreen {
+            guard let mainScreen = NSScreen.main else { return }
+            let mainScreenFrame = mainScreen.frame
+            
+            let panelWidth = mainScreenFrame.size.width
+            let panelHeight = mainScreenFrame.size.height + 20 // Adjust this height as needed
+            targetFrame = NSRect(x: mainScreenFrame.origin.x, y: mainScreenFrame.origin.y, width: panelWidth, height: panelHeight)
+        }
         
-        
-        let panel = HudPanel(contentRect: panelFrame,
+        let panel = HudPanel(contentRect: targetFrame,
                              styleMask: [.resizable, .fullSizeContentView, .hudWindow],
                             backing: .buffered,
                             defer: false
         )
+        
+        if !xTimerConfig.isFullscreen {
+            panel.styleMask.insert(.titled)
+        }
+        
         panel.isOpaque = false
         panel.hasShadow = true
         panel.backgroundColor = .clear
@@ -153,7 +162,9 @@ class XTimerWindow: NSObject {
         panel.isMovableByWindowBackground = true
         panel.delegate = self
         
-        setToFullscreen()
+        if xTimerConfig.isFullscreen {
+            setToFullscreen()
+        }
         
         self.panel = panel
     }
