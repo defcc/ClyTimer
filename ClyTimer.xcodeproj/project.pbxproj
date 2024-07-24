@@ -109,6 +109,7 @@
 		DF6ECEB12BCDF95F00A5204B /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		DFD0A5012B36EDA40076AB07 /* ColorSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectorView.swift; sourceTree = "<group>"; };
 		DFD0A50D2B390A790076AB07 /* digital-7-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "digital-7-font"; sourceTree = "<group>"; };
+		DFDEFAEA2C51AD50003EFC4F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		DFE34B162BB534EA001CA4B7 /* ProLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProLoadingView.swift; sourceTree = "<group>"; };
 		DFE34B1B2BB54859001CA4B7 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
 		DFE34B1D2BB55DC7001CA4B7 /* SettingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWindowController.swift; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 		DF62154D2B18D331001F014D = {
 			isa = PBXGroup;
 			children = (
+				DFDEFAEA2C51AD50003EFC4F /* .env */,
 				DFF1A34B2B1C82E200911AA3 /* ClyTimer.plist */,
 				DF6215582B18D331001F014D /* ClyTimer */,
 				DF6215572B18D331001F014D /* Products */,
@@ -627,7 +629,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClyTimer/ClyTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LCR49HJMTK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -662,7 +664,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClyTimer/ClyTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LCR49HJMTK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

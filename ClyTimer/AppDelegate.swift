@@ -148,7 +148,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            .with(menuItem: NSMenuItem.separator())
             .with(menuItem: NSMenuItem(title: NSLocalizedString("Create Timer", comment: ""), action: nil, keyEquivalent: ""))
             .with(menuItem: NSMenuItem(title: NSLocalizedString("Countdown Timer", comment: ""), action: #selector(createTimer), keyEquivalent: ""))
-            .with(menuItem: NSMenuItem(title: NSLocalizedString("Count Up Timer", comment: ""), action: #selector(createCountupTimer), keyEquivalent: ""))
+            .with(menuItem: NSMenuItem(title: NSLocalizedString("Stopwatch", comment: ""), action: #selector(createCountupTimer), keyEquivalent: ""))
         
 //            .with(menuItem: NSMenuItem.separator())
 //            .with(menuItem: NSMenuItem(title: NSLocalizedString("Event List", comment: ""), action: nil, keyEquivalent: ""))
