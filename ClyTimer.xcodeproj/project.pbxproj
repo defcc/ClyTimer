@@ -48,6 +48,13 @@
 		DF6ECEB22BCDF95F00A5204B /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6ECEB12BCDF95F00A5204B /* Shortcuts.swift */; };
 		DFD0A5022B36EDA40076AB07 /* ColorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0A5012B36EDA40076AB07 /* ColorSelectorView.swift */; };
 		DFD0A50E2B390A790076AB07 /* digital-7-font in Resources */ = {isa = PBXBuildFile; fileRef = DFD0A50D2B390A790076AB07 /* digital-7-font */; };
+		DFDEFAEF2C51B0E7003EFC4F /* ClickLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAEB2C51B0E7003EFC4F /* ClickLog.swift */; };
+		DFDEFAF02C51B0E7003EFC4F /* CollectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAEC2C51B0E7003EFC4F /* CollectData.swift */; };
+		DFDEFAF12C51B0E7003EFC4F /* RateRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAED2C51B0E7003EFC4F /* RateRequestManager.swift */; };
+		DFDEFAF42C51B2E3003EFC4F /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF32C51B2E3003EFC4F /* PostgREST */; };
+		DFDEFAF62C51B2E3003EFC4F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF52C51B2E3003EFC4F /* Supabase */; };
+		DFDEFAF92C51B2F1003EFC4F /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF82C51B2F1003EFC4F /* Defaults */; };
+		DFDEFAFB2C51B519003EFC4F /* ConfigConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */; };
 		DFE34B172BB534EA001CA4B7 /* ProLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE34B162BB534EA001CA4B7 /* ProLoadingView.swift */; };
 		DFE34B1C2BB54859001CA4B7 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE34B1B2BB54859001CA4B7 /* SettingStoryboard.storyboard */; };
 		DFE34B1E2BB55DC7001CA4B7 /* SettingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE34B1D2BB55DC7001CA4B7 /* SettingWindowController.swift */; };
@@ -109,7 +116,10 @@
 		DF6ECEB12BCDF95F00A5204B /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		DFD0A5012B36EDA40076AB07 /* ColorSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectorView.swift; sourceTree = "<group>"; };
 		DFD0A50D2B390A790076AB07 /* digital-7-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "digital-7-font"; sourceTree = "<group>"; };
-		DFDEFAEA2C51AD50003EFC4F /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		DFDEFAEB2C51B0E7003EFC4F /* ClickLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickLog.swift; sourceTree = "<group>"; };
+		DFDEFAEC2C51B0E7003EFC4F /* CollectData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectData.swift; sourceTree = "<group>"; };
+		DFDEFAED2C51B0E7003EFC4F /* RateRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateRequestManager.swift; sourceTree = "<group>"; };
+		DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigConstant.swift; sourceTree = "<group>"; };
 		DFE34B162BB534EA001CA4B7 /* ProLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProLoadingView.swift; sourceTree = "<group>"; };
 		DFE34B1B2BB54859001CA4B7 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
 		DFE34B1D2BB55DC7001CA4B7 /* SettingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWindowController.swift; sourceTree = "<group>"; };
@@ -133,8 +143,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDEFAF62C51B2E3003EFC4F /* Supabase in Frameworks */,
+				DFDEFAF42C51B2E3003EFC4F /* PostgREST in Frameworks */,
 				DF0ADA412C3BEB4E0019AF33 /* LaunchAtLogin in Frameworks */,
 				DF0ADA442C3BEC2F0019AF33 /* KeyboardShortcuts in Frameworks */,
+				DFDEFAF92C51B2F1003EFC4F /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +231,6 @@
 		DF62154D2B18D331001F014D = {
 			isa = PBXGroup;
 			children = (
-				DFDEFAEA2C51AD50003EFC4F /* .env */,
 				DFF1A34B2B1C82E200911AA3 /* ClyTimer.plist */,
 				DF6215582B18D331001F014D /* ClyTimer */,
 				DF6215572B18D331001F014D /* Products */,
@@ -236,6 +248,7 @@
 		DF6215582B18D331001F014D /* ClyTimer */ = {
 			isa = PBXGroup;
 			children = (
+				DFDEFAEE2C51B0E7003EFC4F /* CollectData */,
 				DFE979312C2C287200C27C57 /* sound-resource */,
 				DFD0A50D2B390A790076AB07 /* digital-7-font */,
 				DF188C632B5A6E3400F6C3C5 /* DataModel */,
@@ -280,6 +293,17 @@
 				DF4DD4E32B3F29E4004984C6 /* NSImage+Resize.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		DFDEFAEE2C51B0E7003EFC4F /* CollectData */ = {
+			isa = PBXGroup;
+			children = (
+				DFDEFAEB2C51B0E7003EFC4F /* ClickLog.swift */,
+				DFDEFAEC2C51B0E7003EFC4F /* CollectData.swift */,
+				DFDEFAED2C51B0E7003EFC4F /* RateRequestManager.swift */,
+				DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */,
+			);
+			path = CollectData;
 			sourceTree = "<group>";
 		};
 		DFE34B152BB534C8001CA4B7 /* ProLoadingView */ = {
@@ -345,6 +369,9 @@
 			packageProductDependencies = (
 				DF0ADA402C3BEB4E0019AF33 /* LaunchAtLogin */,
 				DF0ADA432C3BEC2F0019AF33 /* KeyboardShortcuts */,
+				DFDEFAF32C51B2E3003EFC4F /* PostgREST */,
+				DFDEFAF52C51B2E3003EFC4F /* Supabase */,
+				DFDEFAF82C51B2F1003EFC4F /* Defaults */,
 			);
 			productName = floatshelf;
 			productReference = DF6215562B18D331001F014D /* ClyTimer.app */;
@@ -377,6 +404,8 @@
 			packageReferences = (
 				DF0ADA3F2C3BEB4E0019AF33 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				DF0ADA422C3BEC2F0019AF33 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				DFDEFAF22C51B2E3003EFC4F /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				DFDEFAF72C51B2F1003EFC4F /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = DF6215572B18D331001F014D /* Products */;
 			projectDirPath = "";
@@ -444,10 +473,13 @@
 				DF188C842B67753D00F6C3C5 /* ColorListViewController.swift in Sources */,
 				DF6215722B19A08E001F014D /* MyDragView.swift in Sources */,
 				DF0D730F2C233652006011C7 /* XTimerWindow.swift in Sources */,
+				DFDEFAF02C51B0E7003EFC4F /* CollectData.swift in Sources */,
 				DF4DD4E02B3F2239004984C6 /* ImageView.swift in Sources */,
 				DF188C862B688A2400F6C3C5 /* Date.swift in Sources */,
+				DFDEFAF12C51B0E7003EFC4F /* RateRequestManager.swift in Sources */,
 				DF2C01032BA427EE0098D870 /* InAppPurchaseManager.swift in Sources */,
 				DF62158A2B19A1CF001F014D /* NotchExtensions.swift in Sources */,
+				DFDEFAEF2C51B0E7003EFC4F /* ClickLog.swift in Sources */,
 				DF2C010B2BA42A960098D870 /* ProManager.swift in Sources */,
 				DF0D73112C2336E6006011C7 /* CalculateMaxFontSize.swift in Sources */,
 				DF62158C2B19A1CF001F014D /* NSMenuItem+Functional.swift in Sources */,
@@ -462,6 +494,7 @@
 				DFE34B202BB55E6D001CA4B7 /* SettingsTabViewController.swift in Sources */,
 				DFE5757F2BBB007A0043531E /* ClyTimerMenu.swift in Sources */,
 				DF4DD4E42B3F29E4004984C6 /* NSImage+Resize.swift in Sources */,
+				DFDEFAFB2C51B519003EFC4F /* ConfigConstant.swift in Sources */,
 				DF6ECEB02BCD2FA800A5204B /* HotkeyViewController.swift in Sources */,
 				DFE979382C2E638900C27C57 /* XTimerModel.swift in Sources */,
 				DF62155A2B18D331001F014D /* AppDelegate.swift in Sources */,
@@ -731,6 +764,22 @@
 				minimumVersion = 2.0.1;
 			};
 		};
+		DFDEFAF22C51B2E3003EFC4F /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		DFDEFAF72C51B2F1003EFC4F /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -743,6 +792,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF0ADA422C3BEC2F0019AF33 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
 			productName = KeyboardShortcuts;
+		};
+		DFDEFAF32C51B2E3003EFC4F /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFDEFAF22C51B2E3003EFC4F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		DFDEFAF52C51B2E3003EFC4F /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFDEFAF22C51B2E3003EFC4F /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		DFDEFAF82C51B2F1003EFC4F /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFDEFAF72C51B2F1003EFC4F /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 

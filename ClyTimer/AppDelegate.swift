@@ -64,6 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if !DataModel.shared.hasShowWelcome {
+            CollectData.shared.sendLog(for: .onboardingWindowFirstShow)
             showWelcomeWindow()
         }
         
@@ -89,6 +90,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         
         registerShortcuts()
+        
+        CollectData.shared.initUser()
+        CollectData.shared.sendLog(for: .appStartup)
     }
     
     func createNotchApp() {
@@ -186,6 +190,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             runningSoundPlaybackMode: .infinite,
             timeUpSoundPlaybackMode: .infinite
         ))
+        
+        CollectData.shared.sendLog(for: .createTimer)
     }
     
     @objc func createCountupTimer() {
@@ -201,10 +207,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             startSoundPlaybackMode: .specificTimes(count: 1),
             runningSoundPlaybackMode: .infinite
         ))
+        
+        CollectData.shared.sendLog(for: .createStopwatch)
     }
     
     
     @objc func showPaywall() {
+        CollectData.shared.sendLog(for: .showPaywall)
         ProManager.shared.showPaywall()
     }
     
@@ -231,6 +240,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        CollectData.shared.sendLog(for: .appQuit)
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

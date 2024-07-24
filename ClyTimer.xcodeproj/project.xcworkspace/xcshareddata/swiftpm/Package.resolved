@@ -1,6 +1,15 @@
 {
-  "originHash" : "bbd7cd98cdb645f384c4a32e49e0d25d2e29c1b0be66691f71f9a5c221e6ebde",
+  "originHash" : "39a372c22f610187f22617371734d9075379c2ec74617ec2a863c12872f4dc58",
   "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b8c1e7c869aa9faba91edb7fdb0b0a2637740ec0"
+      }
+    },
     {
       "identity" : "keyboardshortcuts",
       "kind" : "remoteSourceControl",
@@ -17,6 +26,33 @@
       "state" : {
         "branch" : "main",
         "revision" : "9a894d799269cb591037f9f9cb0961510d4dca81"
+      }
+    },
+    {
+      "identity" : "supabase-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/supabase/supabase-swift",
+      "state" : {
+        "revision" : "12694543f0c5f407504b54276f0dc1536065e016",
+        "version" : "2.14.3"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "bb5059bde9022d69ac516803f4f227d8ac967f71",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "46072478ca365fe48370993833cb22de9b41567f",
+        "version" : "3.5.2"
       }
     }
   ],

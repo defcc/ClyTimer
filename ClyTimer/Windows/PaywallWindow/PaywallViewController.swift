@@ -107,6 +107,8 @@ class PaywallViewController: NSViewController {
             NotificationCenter.default.post(name: .proSuccessEvt, object: nil)
             self.successAlert.runModal()
         }
+        
+        CollectData.shared.sendLog(for: .upgradeProSuccess)
     }
     
     func showFailed() {
@@ -114,6 +116,7 @@ class PaywallViewController: NSViewController {
         DispatchQueue.main.async {
             self.failedAlert.runModal()
         }
+        CollectData.shared.sendLog(for: .upgradeProFailed)
     }
     @IBAction func purchaseButtonTapped(_ sender: NSButton) {
         if isLoading {
