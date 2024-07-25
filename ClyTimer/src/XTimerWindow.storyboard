@@ -12,11 +12,11 @@
             <objects>
                 <viewController storyboardIdentifier="XTimerViewController" id="kXg-L6-gLH" customClass="XTimerViewController" customModule="ClyTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="IPm-1k-LAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="310"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="310"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView blendingMode="behindWindow" material="menu" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="fba-ka-VKA">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="310"/>
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="310"/>
                                 <subviews>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="VH6-mk-D9c" userLabel="BackgroundView">
                                         <rect key="frame" x="14" y="102" width="171" height="110"/>
@@ -27,7 +27,7 @@
                                         </view>
                                     </box>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="yFT-cd-R0s" userLabel="ActionButton">
-                                        <rect key="frame" x="79" y="37" width="42" height="34"/>
+                                        <rect key="frame" x="229" y="37" width="42" height="34"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="play.circle.fill" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="14C-ql-bSu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <textField hidden="YES" wantsLayer="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-k8-hZX" userLabel="PausedLabel">
-                                        <rect key="frame" x="71" y="14" width="59" height="16"/>
+                                        <rect key="frame" x="221" y="14" width="59" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="PAUSED" id="hZz-aK-jaH">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -50,7 +50,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="Noc-6m-9EZ" userLabel="ResetButton">
-                                        <rect key="frame" x="21" y="37.5" width="18.5" height="35"/>
+                                        <rect key="frame" x="171" y="37.5" width="18.5" height="35"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="arrow.counterclockwise" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="x7Y-cy-rtg">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -63,8 +63,8 @@
                                             <action selector="onResetButtonClick:" target="kXg-L6-gLH" id="onU-Dk-Bjj"/>
                                         </connections>
                                     </button>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="3tm-Kz-LUV" userLabel="soundButton">
-                                        <rect key="frame" x="157" y="37.5" width="28" height="33"/>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="3tm-Kz-LUV" userLabel="resizeButton">
+                                        <rect key="frame" x="307" y="37.5" width="28" height="33"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="rectangle.center.inset.filled" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YHQ-21-nF6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -78,7 +78,7 @@
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-nY-Dhp" userLabel="editButton">
-                                        <rect key="frame" x="142" y="246" width="38" height="36"/>
+                                        <rect key="frame" x="442" y="246" width="38" height="36"/>
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="slider.horizontal.3" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="n4M-04-Aot">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -105,6 +105,20 @@
                                             <action selector="onCloseButtonClick:" target="kXg-L6-gLH" id="AsM-a4-vk4"/>
                                         </connections>
                                     </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="NbV-Qi-yJs" userLabel="soundButton">
+                                        <rect key="frame" x="389" y="245.5" width="38.5" height="38"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSTouchBarAudioOutputVolumeHighTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="PIy-jU-16n">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="3HY-NN-3ev"/>
+                                            <constraint firstAttribute="width" constant="38" id="fxG-yz-pJF"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onEditButtonClick:" target="kXg-L6-gLH" id="Kal-Es-vbf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Noc-6m-9EZ" firstAttribute="centerY" secondItem="yFT-cd-R0s" secondAttribute="centerY" id="0JS-yb-bUq"/>
@@ -117,7 +131,9 @@
                                     <constraint firstItem="3tm-Kz-LUV" firstAttribute="leading" secondItem="yFT-cd-R0s" secondAttribute="trailing" constant="36" id="c4w-gR-HBQ"/>
                                     <constraint firstItem="5Zf-nY-Dhp" firstAttribute="top" secondItem="fba-ka-VKA" secondAttribute="top" constant="30" id="czD-ju-sXl"/>
                                     <constraint firstItem="3tm-Kz-LUV" firstAttribute="centerY" secondItem="yFT-cd-R0s" secondAttribute="centerY" id="j8T-Hh-90N"/>
+                                    <constraint firstItem="NbV-Qi-yJs" firstAttribute="trailing" secondItem="5Zf-nY-Dhp" secondAttribute="leading" constant="-15" id="mpj-Rr-7IZ"/>
                                     <constraint firstItem="jKZ-k8-hZX" firstAttribute="top" secondItem="yFT-cd-R0s" secondAttribute="bottom" constant="10" id="rEP-mm-xgY"/>
+                                    <constraint firstItem="NbV-Qi-yJs" firstAttribute="centerY" secondItem="5Zf-nY-Dhp" secondAttribute="centerY" id="tPy-Xt-q87"/>
                                     <constraint firstItem="W8R-p6-QAd" firstAttribute="leading" secondItem="fba-ka-VKA" secondAttribute="leading" constant="20" id="vDA-oV-bzB"/>
                                 </constraints>
                             </visualEffectView>
@@ -136,8 +152,10 @@
                         <outlet property="closeButton" destination="W8R-p6-QAd" id="JWY-kh-NTW"/>
                         <outlet property="editButton" destination="5Zf-nY-Dhp" id="B1p-VW-Rpz"/>
                         <outlet property="resetButton" destination="Noc-6m-9EZ" id="cxc-wr-2A8"/>
+                        <outlet property="resizeButton" destination="NbV-Qi-yJs" id="r7g-E8-iJ1"/>
                         <outlet property="rootView" destination="fba-ka-VKA" id="Oct-o1-ubC"/>
-                        <outlet property="soundButton" destination="3tm-Kz-LUV" id="TGE-s3-DtW"/>
+                        <outlet property="soundButton" destination="NbV-Qi-yJs" id="1gP-ep-0xW"/>
+                        <outlet property="soundButtonTrailingConstraint" destination="mpj-Rr-7IZ" id="2no-pF-SG3"/>
                         <outlet property="toggleFullscreenButton" destination="3tm-Kz-LUV" id="8at-7A-t6p"/>
                     </connections>
                 </viewController>
@@ -1403,6 +1421,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="27" height="19"/>
         <image name="arrow.clockwise" catalog="system" width="14" height="16"/>
         <image name="arrow.counterclockwise" catalog="system" width="14" height="16"/>
         <image name="chevron.backward" catalog="system" width="10" height="14"/>

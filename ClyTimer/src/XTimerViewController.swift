@@ -17,13 +17,13 @@ class XTimerViewController: NSViewController {
     @IBOutlet weak var rootView: NSVisualEffectView!
     @IBOutlet weak var backgroundView: NSBox!
     @IBOutlet weak var toggleFullscreenButton: NSButton!
+    @IBOutlet weak var soundButtonTrailingConstraint: NSLayoutConstraint!
     
     var xTimerConfig: XTimerConfig? {
         didSet {
             updateTimerDisplay()
         }
     }
-    var isFullscreen: Bool = true
     var panel: NSPanel?
     var countdownLabel: NSTextField?
     var timer: Timer?
@@ -96,34 +96,29 @@ class XTimerViewController: NSViewController {
         
         backgroundView.wantsLayer = true
         
-        closeButton.wantsLayer = true
-        closeButton.layer?.cornerRadius = 8
-        closeButton.layer?.masksToBounds = true
-
-        let trackingArea = NSTrackingArea(
-            rect: closeButton.bounds,
-            options: [.mouseEnteredAndExited, .activeAlways],
-            owner: self,
-            userInfo: ["moreButton": closeButton]
-        )
-        closeButton.addTrackingArea(trackingArea)
-        
-        editButton.wantsLayer = true
-        editButton.layer?.cornerRadius = 8
-        editButton.layer?.masksToBounds = true
-        
-        let editButtonTrackingArea = NSTrackingArea(
-            rect: editButton.bounds,
-            options: [.mouseEnteredAndExited, .activeAlways],
-            owner: self,
-            userInfo: ["moreButton": editButton]
-        )
-        editButton.addTrackingArea(editButtonTrackingArea)
+        addHoverButtonStyle(buttonList: [closeButton, editButton, soundButton])
         
         setupCountdownLabel()
         setupControlButton()
         setupTitle()
         setupExceedTime()
+    }
+    
+    func addHoverButtonStyle(buttonList: [NSButton]) {
+        buttonList.forEach {
+            $0.wantsLayer = true
+            $0.layer?.cornerRadius = 8
+            $0.layer?.masksToBounds = true
+            
+            let trackingArea = NSTrackingArea(
+                rect: soundButton.bounds,
+                options: [.mouseEnteredAndExited, .activeAlways],
+                owner: self,
+                userInfo: ["moreButton": $0]
+            )
+            $0.addTrackingArea(trackingArea)
+        }
+        
     }
     
     func setupTitle() {
@@ -305,9 +300,17 @@ class XTimerViewController: NSViewController {
                     }
                     actionButton.isHidden = false
                     resetButton.isHidden = false
-                    soundButton.isHidden = false
+                    toggleFullscreenButton.isHidden = false
                     closeButton.isHidden = false
                     editButton.isHidden = false
+                    
+                    DispatchQueue.main.async {
+                        NSAnimationContext.runAnimationGroup { context in
+                            context.duration = 0.2
+                            self.soundButtonTrailingConstraint.animator().constant = -15
+                        } completionHandler: {
+                        }
+                    }
                 }
             }
         }
@@ -328,9 +331,17 @@ class XTimerViewController: NSViewController {
                         actionButton.isHidden = true
                     }
                     resetButton.isHidden = true
-                    soundButton.isHidden = true
+                    toggleFullscreenButton.isHidden = true
                     closeButton.isHidden = true
                     editButton.isHidden = true
+                    
+                    DispatchQueue.main.async {
+                        NSAnimationContext.runAnimationGroup { context in
+                            context.duration = 0.2
+                            self.soundButtonTrailingConstraint.animator().constant = 15
+                        } completionHandler: {
+                        }
+                    }
                 }
             }
         }
