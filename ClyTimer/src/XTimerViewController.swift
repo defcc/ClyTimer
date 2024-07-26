@@ -251,6 +251,7 @@ class XTimerViewController: NSViewController {
     
     func playStartSound() {
         guard let xTimerConfig = xTimerConfig else { return }
+         
         if !xTimerConfig.startSoundEnabled || xTimerConfig.startSoundId.isEmpty {
             self.changeStateToRunning()
             return
@@ -417,9 +418,12 @@ class XTimerViewController: NSViewController {
         
         if xTimerConfig.silent {
             soundButton.image = NSImage(systemSymbolName: "speaker.slash.fill", accessibilityDescription: "")
-            soundButton.image
+            soundButton.symbolConfiguration = .init(scale: .large)
+            
+            soundManager.pauseSound()
         } else {
             soundButton.image = NSImage(named: NSImage.touchBarAudioOutputVolumeHighTemplateName)
+            soundButton.symbolConfiguration = .init(scale: .large)
         }
     }
 }

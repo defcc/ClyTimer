@@ -239,12 +239,12 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-Ou-5Sh">
-                                                        <rect key="frame" x="148" y="208" width="140" height="21"/>
+                                                        <rect key="frame" x="142" y="208" width="146" height="21"/>
                                                         <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="3f0-De-jvK">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <segments>
                                                                 <segment label="Count Down"/>
-                                                                <segment label="Count Up" selected="YES" tag="1"/>
+                                                                <segment label="Stopwatch" selected="YES" tag="1"/>
                                                             </segments>
                                                         </segmentedCell>
                                                         <connections>
