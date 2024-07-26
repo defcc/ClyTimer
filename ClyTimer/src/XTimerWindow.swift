@@ -54,6 +54,8 @@ struct XTimerConfig {
     var timeisUpString: String = "Time's Up"
     var showExceededTime: Bool = true
     
+    var silent: Bool = false
+    
     var showFlashInTheLast10Seconds: Bool = true
     
     var startSoundId: String = ""

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,10 +79,11 @@
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-nY-Dhp" userLabel="editButton">
-                                        <rect key="frame" x="442" y="246" width="38" height="36"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="slider.horizontal.3" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="n4M-04-Aot">
+                                        <rect key="frame" x="442" y="244" width="38.5" height="40"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="n4M-04-Aot">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <imageReference key="image" image="slider.horizontal.3" catalog="system" symbolScale="large"/>
                                         </buttonCell>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="4be-tg-2Ba"/>
@@ -92,10 +94,11 @@
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="W8R-p6-QAd" userLabel="closeButton">
-                                        <rect key="frame" x="20" y="246.5" width="38.5" height="36"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="xmark" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="xkA-BZ-5ny">
+                                        <rect key="frame" x="20" y="244.5" width="38" height="39"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="xkA-BZ-5ny">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                         </buttonCell>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="ram-qM-jll"/>
@@ -105,18 +108,19 @@
                                             <action selector="onCloseButtonClick:" target="kXg-L6-gLH" id="AsM-a4-vk4"/>
                                         </connections>
                                     </button>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="NbV-Qi-yJs" userLabel="soundButton">
-                                        <rect key="frame" x="389" y="245.5" width="38.5" height="38"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSTouchBarAudioOutputVolumeHighTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="PIy-jU-16n">
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="QzL-t8-hZ2" userLabel="soundButton">
+                                        <rect key="frame" x="389" y="244" width="38.5" height="41"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Tdf-ML-F2B">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <imageReference key="image" image="speaker.wave.2.fill" catalog="system" symbolScale="large"/>
                                         </buttonCell>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="3HY-NN-3ev"/>
-                                            <constraint firstAttribute="width" constant="38" id="fxG-yz-pJF"/>
+                                            <constraint firstAttribute="height" constant="32" id="IFD-sJ-5sq"/>
+                                            <constraint firstAttribute="width" constant="38" id="NKj-Ow-g7G"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="onEditButtonClick:" target="kXg-L6-gLH" id="Kal-Es-vbf"/>
+                                            <action selector="onSoundButtonClick:" target="kXg-L6-gLH" id="2jG-0b-29d"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -127,13 +131,13 @@
                                     <constraint firstItem="jKZ-k8-hZX" firstAttribute="centerX" secondItem="yFT-cd-R0s" secondAttribute="centerX" id="9Pg-Mo-duu"/>
                                     <constraint firstAttribute="trailing" secondItem="5Zf-nY-Dhp" secondAttribute="trailing" constant="20" id="IHo-s4-sCR"/>
                                     <constraint firstItem="yFT-cd-R0s" firstAttribute="centerX" secondItem="fba-ka-VKA" secondAttribute="centerX" id="Nh8-Y1-fkN"/>
+                                    <constraint firstItem="QzL-t8-hZ2" firstAttribute="trailing" secondItem="5Zf-nY-Dhp" secondAttribute="leading" constant="-15" id="SEt-sk-Gwa"/>
                                     <constraint firstItem="W8R-p6-QAd" firstAttribute="top" secondItem="fba-ka-VKA" secondAttribute="top" constant="30" id="UAA-3z-WDA"/>
+                                    <constraint firstItem="QzL-t8-hZ2" firstAttribute="centerY" secondItem="5Zf-nY-Dhp" secondAttribute="centerY" id="YYM-jq-rIx"/>
                                     <constraint firstItem="3tm-Kz-LUV" firstAttribute="leading" secondItem="yFT-cd-R0s" secondAttribute="trailing" constant="36" id="c4w-gR-HBQ"/>
                                     <constraint firstItem="5Zf-nY-Dhp" firstAttribute="top" secondItem="fba-ka-VKA" secondAttribute="top" constant="30" id="czD-ju-sXl"/>
                                     <constraint firstItem="3tm-Kz-LUV" firstAttribute="centerY" secondItem="yFT-cd-R0s" secondAttribute="centerY" id="j8T-Hh-90N"/>
-                                    <constraint firstItem="NbV-Qi-yJs" firstAttribute="trailing" secondItem="5Zf-nY-Dhp" secondAttribute="leading" constant="-15" id="mpj-Rr-7IZ"/>
                                     <constraint firstItem="jKZ-k8-hZX" firstAttribute="top" secondItem="yFT-cd-R0s" secondAttribute="bottom" constant="10" id="rEP-mm-xgY"/>
-                                    <constraint firstItem="NbV-Qi-yJs" firstAttribute="centerY" secondItem="5Zf-nY-Dhp" secondAttribute="centerY" id="tPy-Xt-q87"/>
                                     <constraint firstItem="W8R-p6-QAd" firstAttribute="leading" secondItem="fba-ka-VKA" secondAttribute="leading" constant="20" id="vDA-oV-bzB"/>
                                 </constraints>
                             </visualEffectView>
@@ -152,10 +156,9 @@
                         <outlet property="closeButton" destination="W8R-p6-QAd" id="JWY-kh-NTW"/>
                         <outlet property="editButton" destination="5Zf-nY-Dhp" id="B1p-VW-Rpz"/>
                         <outlet property="resetButton" destination="Noc-6m-9EZ" id="cxc-wr-2A8"/>
-                        <outlet property="resizeButton" destination="NbV-Qi-yJs" id="r7g-E8-iJ1"/>
                         <outlet property="rootView" destination="fba-ka-VKA" id="Oct-o1-ubC"/>
-                        <outlet property="soundButton" destination="NbV-Qi-yJs" id="1gP-ep-0xW"/>
-                        <outlet property="soundButtonTrailingConstraint" destination="mpj-Rr-7IZ" id="2no-pF-SG3"/>
+                        <outlet property="soundButton" destination="QzL-t8-hZ2" id="Wu5-hT-izX"/>
+                        <outlet property="soundButtonTrailingConstraint" destination="SEt-sk-Gwa" id="pfN-cR-suq"/>
                         <outlet property="toggleFullscreenButton" destination="3tm-Kz-LUV" id="8at-7A-t6p"/>
                     </connections>
                 </viewController>
@@ -1421,7 +1424,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="27" height="19"/>
         <image name="arrow.clockwise" catalog="system" width="14" height="16"/>
         <image name="arrow.counterclockwise" catalog="system" width="14" height="16"/>
         <image name="chevron.backward" catalog="system" width="10" height="14"/>
@@ -1429,7 +1431,8 @@
         <image name="play.circle" catalog="system" width="15" height="15"/>
         <image name="play.circle.fill" catalog="system" width="15" height="15"/>
         <image name="rectangle.center.inset.filled" catalog="system" width="18" height="14"/>
-        <image name="slider.horizontal.3" catalog="system" width="16" height="13"/>
-        <image name="xmark" catalog="system" width="14" height="13"/>
+        <image name="slider.horizontal.3" catalog="system" width="21" height="17"/>
+        <image name="speaker.wave.2.fill" catalog="system" width="24" height="18"/>
+        <image name="xmark" catalog="system" width="17" height="16"/>
     </resources>
 </document>

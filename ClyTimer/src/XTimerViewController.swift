@@ -410,6 +410,18 @@ class XTimerViewController: NSViewController {
             toggleFullscreenButton.image = NSImage(systemSymbolName: "rectangle.inset.filled", accessibilityDescription: "")
         }
     }
+    @IBAction func onSoundButtonClick(_ sender: Any) {
+        self.xTimerConfig?.silent.toggle()
+        
+        guard let xTimerConfig = xTimerConfig else { return }
+        
+        if xTimerConfig.silent {
+            soundButton.image = NSImage(systemSymbolName: "speaker.slash.fill", accessibilityDescription: "")
+            soundButton.image
+        } else {
+            soundButton.image = NSImage(named: NSImage.touchBarAudioOutputVolumeHighTemplateName)
+        }
+    }
 }
 
 
