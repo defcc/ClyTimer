@@ -55,6 +55,12 @@
 		DFDEFAF62C51B2E3003EFC4F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF52C51B2E3003EFC4F /* Supabase */; };
 		DFDEFAF92C51B2F1003EFC4F /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF82C51B2F1003EFC4F /* Defaults */; };
 		DFDEFAFB2C51B519003EFC4F /* ConfigConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */; };
+		DFE100012C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFFF2C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld */; };
+		DFE1FFF52C55D6090088EAF6 /* ClyTimer_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFF42C55D6090088EAF6 /* ClyTimer_iosApp.swift */; };
+		DFE1FFF72C55D6090088EAF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFF62C55D6090088EAF6 /* ContentView.swift */; };
+		DFE1FFF92C55D60A0088EAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE1FFF82C55D60A0088EAF6 /* Assets.xcassets */; };
+		DFE1FFFC2C55D60A0088EAF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE1FFFB2C55D60A0088EAF6 /* Preview Assets.xcassets */; };
+		DFE1FFFE2C55D60A0088EAF6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFFD2C55D60A0088EAF6 /* Persistence.swift */; };
 		DFE34B172BB534EA001CA4B7 /* ProLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE34B162BB534EA001CA4B7 /* ProLoadingView.swift */; };
 		DFE34B1C2BB54859001CA4B7 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE34B1B2BB54859001CA4B7 /* SettingStoryboard.storyboard */; };
 		DFE34B1E2BB55DC7001CA4B7 /* SettingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE34B1D2BB55DC7001CA4B7 /* SettingWindowController.swift */; };
@@ -120,6 +126,13 @@
 		DFDEFAEC2C51B0E7003EFC4F /* CollectData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectData.swift; sourceTree = "<group>"; };
 		DFDEFAED2C51B0E7003EFC4F /* RateRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateRequestManager.swift; sourceTree = "<group>"; };
 		DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigConstant.swift; sourceTree = "<group>"; };
+		DFE100002C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClyTimer_ios.xcdatamodel; sourceTree = "<group>"; };
+		DFE1FFF22C55D6090088EAF6 /* ClyTimer-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClyTimer-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE1FFF42C55D6090088EAF6 /* ClyTimer_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClyTimer_iosApp.swift; sourceTree = "<group>"; };
+		DFE1FFF62C55D6090088EAF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFE1FFF82C55D60A0088EAF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE1FFFB2C55D60A0088EAF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFE1FFFD2C55D60A0088EAF6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DFE34B162BB534EA001CA4B7 /* ProLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProLoadingView.swift; sourceTree = "<group>"; };
 		DFE34B1B2BB54859001CA4B7 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
 		DFE34B1D2BB55DC7001CA4B7 /* SettingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWindowController.swift; sourceTree = "<group>"; };
@@ -148,6 +161,13 @@
 				DF0ADA412C3BEB4E0019AF33 /* LaunchAtLogin in Frameworks */,
 				DF0ADA442C3BEC2F0019AF33 /* KeyboardShortcuts in Frameworks */,
 				DFDEFAF92C51B2F1003EFC4F /* Defaults in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE1FFEF2C55D6090088EAF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +253,7 @@
 			children = (
 				DFF1A34B2B1C82E200911AA3 /* ClyTimer.plist */,
 				DF6215582B18D331001F014D /* ClyTimer */,
+				DFE1FFF32C55D6090088EAF6 /* ClyTimer-ios */,
 				DF6215572B18D331001F014D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -241,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				DF6215562B18D331001F014D /* ClyTimer.app */,
+				DFE1FFF22C55D6090088EAF6 /* ClyTimer-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,6 +326,27 @@
 				DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */,
 			);
 			path = CollectData;
+			sourceTree = "<group>";
+		};
+		DFE1FFF32C55D6090088EAF6 /* ClyTimer-ios */ = {
+			isa = PBXGroup;
+			children = (
+				DFE1FFF42C55D6090088EAF6 /* ClyTimer_iosApp.swift */,
+				DFE1FFF62C55D6090088EAF6 /* ContentView.swift */,
+				DFE1FFF82C55D60A0088EAF6 /* Assets.xcassets */,
+				DFE1FFFD2C55D60A0088EAF6 /* Persistence.swift */,
+				DFE1FFFF2C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld */,
+				DFE1FFFA2C55D60A0088EAF6 /* Preview Content */,
+			);
+			path = "ClyTimer-ios";
+			sourceTree = "<group>";
+		};
+		DFE1FFFA2C55D60A0088EAF6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DFE1FFFB2C55D60A0088EAF6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		DFE34B152BB534C8001CA4B7 /* ProLoadingView */ = {
@@ -377,6 +420,23 @@
 			productReference = DF6215562B18D331001F014D /* ClyTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DFE1FFF12C55D6090088EAF6 /* ClyTimer-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE100022C55D60A0088EAF6 /* Build configuration list for PBXNativeTarget "ClyTimer-ios" */;
+			buildPhases = (
+				DFE1FFEE2C55D6090088EAF6 /* Sources */,
+				DFE1FFEF2C55D6090088EAF6 /* Frameworks */,
+				DFE1FFF02C55D6090088EAF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ClyTimer-ios";
+			productName = "ClyTimer-ios";
+			productReference = DFE1FFF22C55D6090088EAF6 /* ClyTimer-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,11 +444,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					DF6215552B18D331001F014D = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					DFE1FFF12C55D6090088EAF6 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -412,6 +475,7 @@
 			projectRoot = "";
 			targets = (
 				DF6215552B18D331001F014D /* ClyTimer */,
+				DFE1FFF12C55D6090088EAF6 /* ClyTimer-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -431,6 +495,15 @@
 				DFE979322C2C287200C27C57 /* sound-resource in Resources */,
 				DF6215642B18D332001F014D /* Main.storyboard in Resources */,
 				DF2C01292BA47FC40098D870 /* Paywall.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE1FFF02C55D6090088EAF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE1FFFC2C55D60A0088EAF6 /* Preview Assets.xcassets in Resources */,
+				DFE1FFF92C55D60A0088EAF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +582,17 @@
 				DF188C822B6745B300F6C3C5 /* ColorSelector.swift in Sources */,
 				DF6215852B19A1CF001F014D /* Array+Functional.swift in Sources */,
 				DF2C01052BA428260098D870 /* PaywallViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE1FFEE2C55D6090088EAF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE100012C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld in Sources */,
+				DFE1FFFE2C55D60A0088EAF6 /* Persistence.swift in Sources */,
+				DFE1FFF72C55D6090088EAF6 /* ContentView.swift in Sources */,
+				DFE1FFF52C55D6090088EAF6 /* ClyTimer_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +758,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 ClyApp";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -709,6 +794,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 ClyApp";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -721,6 +807,73 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DFE100032C55D60A0088EAF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClyTimer-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = LCR49HJMTK;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClyTimer;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sanci.timer.ClyTimer-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFE100042C55D60A0088EAF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClyTimer-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = LCR49HJMTK;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClyTimer;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sanci.timer.ClyTimer-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -741,6 +894,15 @@
 			buildConfigurations = (
 				DF6215692B18D332001F014D /* Debug */,
 				DF62156A2B18D332001F014D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE100022C55D60A0088EAF6 /* Build configuration list for PBXNativeTarget "ClyTimer-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE100032C55D60A0088EAF6 /* Debug */,
+				DFE100042C55D60A0088EAF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -818,6 +980,16 @@
 			);
 			currentVersion = DF2685B42B9C4DD400106D85 /* FloatWidget.xcdatamodel */;
 			path = XTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		DFE1FFFF2C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFE100002C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodel */,
+			);
+			currentVersion = DFE100002C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodel */;
+			path = ClyTimer_ios.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

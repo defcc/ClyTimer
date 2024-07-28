@@ -17,6 +17,13 @@ extension NSNotification.Name {
     static let showMenu = NSNotification.Name("showMenu")
 }
 
+class DragToCreateStatusButton: NSButton {
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        print("")
+    }
+}
+
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -41,6 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }()
     
     var globalEventMonitor: Any!
+    var localEventMonitor: Any!
         
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         print("ok")
@@ -61,6 +69,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
             
+        }
+        
+        localEventMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown]) { [weak self] event in
+            self?.handleMouseDown(event: event)
         }
         
         if !DataModel.shared.hasShowWelcome {
@@ -95,13 +107,52 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         CollectData.shared.sendLog(for: .appStartup)
     }
     
-    func createNotchApp() {
-        print("notch app comes now")
-        switch DataModel.shared.notchApp {
-        default:
-            print("none")
+    func handleMouseDown(event: NSEvent) {
+        if let button = statusItem?.button, let window = button.window {
+            // Get the button's frame in window coordinates
+            let buttonFrameInWindow = button.convert(button.bounds, to: nil)
+            // Get the button's frame in screen coordinates
+            let buttonFrameInScreen = window.convertToScreen(buttonFrameInWindow)
+            // Get the current mouse location in screen coordinates
+            let mouseLocation = NSEvent.mouseLocation
+            
+            if buttonFrameInScreen.contains(mouseLocation) {
+                print("Mouse down on status button")
+                // Handle mouse down event here
+            }
         }
-        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+    
+    @objc func showQuickCreator() {
+        guard let mainScreen = NSScreen.main else { return }
+        let mainScreenFrame = mainScreen.frame
+        
+        let panel = NSPanel(contentRect: NSRect(x: 0, y: 0, width: 300, height: 460),
+                            styleMask: [.nonactivatingPanel, .hudWindow],
+                            backing: .buffered,
+                            defer: false
+        )
+        panel.level = .popUpMenu
+        panel.isOpaque = false
+        panel.backgroundColor = .red
+        
+        
+        panel.becomesKeyOnlyIfNeeded = true
+        panel.hidesOnDeactivate = false
+        
+        panel.isExcludedFromWindowsMenu = true
+        
+        panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+        
+        panel.makeKeyAndOrderFront(nil)
+        
+        if let mainScreenFrame = NSScreen.main?.frame {
+            let panelSize = panel.frame.size
+            let xPosition = mainScreenFrame.origin.x + mainScreenFrame.size.width - panelSize.width - 20
+            let yPosition = mainScreenFrame.origin.y + mainScreenFrame.size.height - panelSize.height - 100
+            
+            panel.setFrameOrigin(NSPoint(x: xPosition, y: yPosition))
+        }
     }
     
     func setupMenubarIcon() {
@@ -151,7 +202,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            
 //            .with(menuItem: NSMenuItem.separator())
             .with(menuItem: NSMenuItem(title: NSLocalizedString("Create Timer", comment: ""), action: nil, keyEquivalent: ""))
-            .with(menuItem: NSMenuItem(title: NSLocalizedString("Countdown Timer", comment: ""), action: #selector(createTimer), keyEquivalent: ""))
+            .with(menuItem: NSMenuItem(title: NSLocalizedString("Countdown Timer", comment: ""), action: #selector(showQuickCreator), keyEquivalent: ""))
             .with(menuItem: NSMenuItem(title: NSLocalizedString("Stopwatch", comment: ""), action: #selector(createCountupTimer), keyEquivalent: ""))
         
 //            .with(menuItem: NSMenuItem.separator())
