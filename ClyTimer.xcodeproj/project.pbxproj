@@ -56,6 +56,7 @@
 		DFDEFAF92C51B2F1003EFC4F /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DFDEFAF82C51B2F1003EFC4F /* Defaults */; };
 		DFDEFAFB2C51B519003EFC4F /* ConfigConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */; };
 		DFE100012C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFFF2C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodeld */; };
+		DFE100092C55D8920088EAF6 /* clytimer-frontend in Resources */ = {isa = PBXBuildFile; fileRef = DFE100082C55D8920088EAF6 /* clytimer-frontend */; };
 		DFE1FFF52C55D6090088EAF6 /* ClyTimer_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFF42C55D6090088EAF6 /* ClyTimer_iosApp.swift */; };
 		DFE1FFF72C55D6090088EAF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE1FFF62C55D6090088EAF6 /* ContentView.swift */; };
 		DFE1FFF92C55D60A0088EAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE1FFF82C55D60A0088EAF6 /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		DFDEFAED2C51B0E7003EFC4F /* RateRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateRequestManager.swift; sourceTree = "<group>"; };
 		DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigConstant.swift; sourceTree = "<group>"; };
 		DFE100002C55D60A0088EAF6 /* ClyTimer_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClyTimer_ios.xcdatamodel; sourceTree = "<group>"; };
+		DFE100082C55D8920088EAF6 /* clytimer-frontend */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "clytimer-frontend"; sourceTree = "<group>"; };
 		DFE1FFF22C55D6090088EAF6 /* ClyTimer-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClyTimer-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE1FFF42C55D6090088EAF6 /* ClyTimer_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClyTimer_iosApp.swift; sourceTree = "<group>"; };
 		DFE1FFF62C55D6090088EAF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		DF2C00FC2BA426280098D870 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				DFE1000A2C55E2850088EAF6 /* DashboardWIndow */,
 				DFE575672BB7C6D20043531E /* WelcomeWindow */,
 				DFE34B182BB54575001CA4B7 /* SettingWindow */,
 				DF2C01012BA4274B0098D870 /* PaywallWindow */,
@@ -270,9 +273,10 @@
 		DF6215582B18D331001F014D /* ClyTimer */ = {
 			isa = PBXGroup;
 			children = (
-				DFDEFAEE2C51B0E7003EFC4F /* CollectData */,
+				DFE100082C55D8920088EAF6 /* clytimer-frontend */,
 				DFE979312C2C287200C27C57 /* sound-resource */,
 				DFD0A50D2B390A790076AB07 /* digital-7-font */,
+				DFDEFAEE2C51B0E7003EFC4F /* CollectData */,
 				DF188C632B5A6E3400F6C3C5 /* DataModel */,
 				DF2C00FC2BA426280098D870 /* Windows */,
 				DF5B307B2B7DEDED0094940D /* ThirdParty */,
@@ -326,6 +330,13 @@
 				DFDEFAFA2C51B519003EFC4F /* ConfigConstant.swift */,
 			);
 			path = CollectData;
+			sourceTree = "<group>";
+		};
+		DFE1000A2C55E2850088EAF6 /* DashboardWIndow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DashboardWIndow;
 			sourceTree = "<group>";
 		};
 		DFE1FFF32C55D6090088EAF6 /* ClyTimer-ios */ = {
@@ -492,6 +503,7 @@
 				DF6215612B18D332001F014D /* Assets.xcassets in Resources */,
 				DFE34B1C2BB54859001CA4B7 /* SettingStoryboard.storyboard in Resources */,
 				DF0D73132C246734006011C7 /* XTimerWindow.storyboard in Resources */,
+				DFE100092C55D8920088EAF6 /* clytimer-frontend in Resources */,
 				DFE979322C2C287200C27C57 /* sound-resource in Resources */,
 				DF6215642B18D332001F014D /* Main.storyboard in Resources */,
 				DF2C01292BA47FC40098D870 /* Paywall.storyboard in Resources */,
@@ -746,14 +758,14 @@
 				CODE_SIGN_ENTITLEMENTS = ClyTimer/ClyTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = LCR49HJMTK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClyTimer.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ClyTimer;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "display video on the top";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 ClyApp";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -764,7 +776,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanci.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -782,14 +794,14 @@
 				CODE_SIGN_ENTITLEMENTS = ClyTimer/ClyTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = LCR49HJMTK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClyTimer.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ClyTimer;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "display video on the top";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 ClyApp";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -800,7 +812,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanci.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
